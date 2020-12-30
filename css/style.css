@@ -17,11 +17,15 @@ a {
   text-decoration: none;
 }
 
+.space {
+  background-color: transparent;
+}
+
 header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  background-color: lightblue;
+  background-color: #add8e6;
   width: 100%;
   z-index: 1000;
 }
@@ -286,7 +290,7 @@ section {
     top: 3rem;
     left: 0;
     width: 100%;
-    background-color: lightblue;
+    background-color: #add8e6;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -400,14 +404,56 @@ section {
     color: #4c96d7;
   }
 }
+@media (max-width: 545px) {
+  .logo {
+    display: none;
+  }
+}
+main {
+  background-color: #fff;
+  margin: 0 10px;
+  font-size: large;
+}
+main h1, main h2, main h3 {
+  font-weight: bolder;
+}
+main h4, main h5, main h6 {
+  font-weight: lighter;
+}
+main h1.title, main h1.title a {
+  -webkit-text-decoration: underline #4c96d7 5px;
+          text-decoration: underline #4c96d7 5px;
+}
+main h1.title a {
+  color: #000;
+}
+main h1.title a:hover {
+  color: #4c96d7;
+}
+main a {
+  color: #4c96d7;
+}
+main a:hover {
+  color: #000;
+  -webkit-text-decoration: underline solid #4c96d7 2px;
+          text-decoration: underline solid #4c96d7 2px;
+}
+main .content {
+  padding: 5px 10px;
+}
+main .content p {
+  text-align: justify;
+}
+
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   padding: 10px;
-  background-color: lightblue;
+  background-color: #add8e6;
+  color: #303030;
 }
 footer a {
-  color: black;
+  color: #303030;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
