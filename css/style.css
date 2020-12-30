@@ -1,0 +1,77 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+header {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightblue;
+
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "logo title";
+}
+header img {
+  grid-area: logo;
+}
+header h1 {
+  font-family: 'Nosifer', cursive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  color: #4c96d7;
+
+  grid-area: title;
+} */
+
+nav {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightblue;
+}
+nav a {
+  /* color: black; */
+  text-decoration-line: none;
+}
+nav a:hover {
+  text-decoration-line: underline;
+}
+nav ul.grandparent {
+  display: grid;
+  grid-row: 1 / span 6;
+  grid-column: 1 / -1;
+}
+nav li {
+  list-style-type: none;
+}
+nav ul.grandparent li.parent a {
+  color: red !important;
+}
+nav ul.grandparent li.parent ul.child a {
+  color: blueviolet !important;
+}
+nav ul.grandparent li.parent ul.child ul.grandchild a {
+  color: darkgoldenrod !important;
+}
+
+/* footer {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightblue;
+}
+footer a {
+  color: black;
+  text-decoration-line: none;
+}
+footer a:hover {
+  text-decoration-line: underline;
+} */
