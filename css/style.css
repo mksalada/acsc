@@ -6,7 +6,6 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  overflow: hidden;
 }
 
 ul {
@@ -28,6 +27,7 @@ header {
   background-color: #add8e6;
   width: 100%;
   z-index: 1000;
+  overflow: visible;
 }
 
 section {
@@ -409,9 +409,53 @@ section {
     display: none;
   }
 }
+@media (min-width: 921px) and (max-width: 1020px) {
+  .logo {
+    display: none;
+  }
+}
+.header-slide {
+  background-color: #add8e6;
+  font-size: large;
+}
+
+.header-slide-container {
+  margin: 0;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-slide-container img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.header-slide-container .notes {
+  position: relative;
+  top: 0;
+  padding: 15px 30px;
+  letter-spacing: 2px;
+}
+.header-slide-container .picture {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 1163px) {
+  .notes {
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 895px) {
+  .picture img {
+    padding-right: 20px;
+  }
+}
 main {
   background-color: #fff;
-  margin: 0 10px;
+  margin: 0 5px;
   font-size: large;
 }
 main h1, main h2, main h3 {
@@ -421,6 +465,7 @@ main h4, main h5, main h6 {
   font-weight: lighter;
 }
 main h1.title, main h1.title a {
+  font-size: 2.75rem;
   -webkit-text-decoration: underline #4c96d7 5px;
           text-decoration: underline #4c96d7 5px;
 }
@@ -428,6 +473,16 @@ main h1.title a {
   color: #000;
 }
 main h1.title a:hover {
+  color: #4c96d7;
+}
+main h2.subtitle, main h2.subtitle a {
+  -webkit-text-decoration: underline #4c96d7 5px;
+          text-decoration: underline #4c96d7 5px;
+}
+main h2.subtitle a {
+  color: #000;
+}
+main h2.subtitle a:hover {
   color: #4c96d7;
 }
 main a {
@@ -445,6 +500,28 @@ main .content p {
   text-align: justify;
 }
 
+mark {
+  background-color: #add8e6;
+  color: #4c96d7;
+}
+
+.header-slide-container mark {
+  background-color: #fff;
+  color: #4c96d7;
+}
+
+@media (min-width: 900px) {
+  main,
+.header-slide-container {
+    margin: 0 10%;
+  }
+}
+@media (min-width: 901px) and (max-width: 1055px) {
+  main,
+.header-slide-container {
+    margin: 0 5%;
+  }
+}
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;

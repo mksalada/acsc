@@ -39,7 +39,6 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 body {
   font-family: $font1;
-  overflow: hidden;
 }
 
 // Reset
@@ -54,6 +53,7 @@ header {
   background-color: $clb;
   width: 100%;
   z-index: 1000;
+  overflow: visible;
 }
 
 // ! Do not use html section tag on your document
@@ -361,31 +361,60 @@ section {
   }
 }
 
-@media (max-width: 545px) {
-  .logo { display: none;}
+@media (max-width: 545px) { .logo { display: none;} }
+@media (min-width: 921px) and (max-width: 1020px) { .logo { display: none;} }
+
+.header-slide {
+  background-color: $clb;
+  font-size: large;
 }
+
+.header-slide-container {
+  margin: 0;
+  height: 400px;
+  @include flex-center;
+
+  img {
+    //position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .notes {
+    position: relative;
+    top: 0;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+  }
+
+  .picture { margin: 0; padding: 0; width: 100%; }
+}
+
+@media (max-width: 1163px) { .notes { padding: 5px 10px; } }
+@media (max-width: 895px) { .picture img { padding-right: 20px; } }
 
 ///////////////////////////////
 // Main (Content)
 
 main {
   background-color: $cwh;
-  margin: 0 10px;
+  margin: 0 5px;
   font-size: large;
-  // border: 1px solid black;
 
   h1, h2, h3 { font-weight: bolder; }
   h4, h5, h6 { font-weight: lighter; }
 
   h1.title, h1.title a {
+    font-size: 2.75rem;
     text-decoration: underline $color1 5px;
   }
-
   h1.title a { color: $cbl; }
+  h1.title a:hover { color: $color1; }
 
-  h1.title a:hover {
-    color: $color1;
-  }
+  h2.subtitle, h2.subtitle a { text-decoration: underline $color1 5px; }
+  h2.subtitle a { color: $cbl; }
+  h2.subtitle a:hover { color: $color1; }
 
   a { color: $color1; }
   a:hover {
@@ -397,6 +426,20 @@ main {
   .content p { text-align: justify; }
 
 }
+
+// Mark Tag
+mark { background-color: $clb; color: $color1;}
+.header-slide-container mark { background-color: $cwh; color: $color1;}
+
+@media (min-width: 900px) {
+  main,
+  .header-slide-container { margin: 0 10%; }
+}
+@media (min-width: 901px) and (max-width: 1055px) {
+  main,
+  .header-slide-container { margin: 0 5%; }
+}
+
 ///////////////////////////////
 
 // Footer
