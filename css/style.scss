@@ -1,18 +1,15 @@
-// @import url('URL');
-
+// Main Sass File
 // ? Mixins
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 @mixin flex-center-sb {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 @mixin center-flex-end {
   align-items: center;
   justify-content: flex-end;
@@ -36,15 +33,10 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: $font1;
-}
-
-// Reset
+body { font-family: $font1; }
 ul { list-style: none; }
 a { text-decoration: none; }
-.space { background-color: transparent;}
+.space { background-color: transparent; }
 
 // Header
 header {
@@ -61,10 +53,8 @@ section {
   position: relative;
   height: calc(100vh - 3rem);
   width: 100%;
-  /* background: url('bg.jpg') no-repeat top center / cover; */
   overflow: hidden;
 }
-
 .overlay {
   position: absolute;
   width: 100%;
@@ -82,7 +72,6 @@ section {
   display: flex;
   position: relative;
 }
-
 .logo-container {
   flex: 1;
   @include flex-center-sb;
@@ -92,7 +81,6 @@ section {
   flex: 3;
   display: flex;
 }
-
 .nav-links { flex: 2; }
 
 .logo {
@@ -105,11 +93,10 @@ section {
   text-transform: uppercase;
   line-height: 3rem;
 }
-
 .logo-img { width: 40px; }
+
 .nav-links > ul { @include flex-center; }
 .nav-link { position: relative; }
-
 .nav-link > a {
   line-height: 3rem;
   color: $color1;
@@ -119,7 +106,6 @@ section {
   @include flex-center-sb;
   transition: .5s;
 }
-
 .nav-link:hover > a { transform: scale(1.1); }
 
 .dropdown {
@@ -134,7 +120,6 @@ section {
 
   ul { position: relative; }
 }
-
 .dropdown-link > a {
   @include flex-center-sb;
   background-color: $cwh;
@@ -143,12 +128,10 @@ section {
   font-size: .9rem;
   transition: .3s;
 }
-
 .dropdown-link:hover > a {
   background-color: $color1;
   color: $cwh;
 }
-
 .dropdown-link:not(:nth-last-child(2)) { border-bottom: 1px solid #efefef; }
 
 .arrow {
@@ -166,7 +149,6 @@ section {
 
 .dropdown-link:first-child:hover ~ .arrow { background-color: $color1; }
 .dropdown-link { position: relative; }
-
 .dropdown.second {
   top: 0;
   left: 100%;
@@ -192,7 +174,6 @@ section {
   display: none;
   @include center-flex-end;
 }
-
 .hamburger-menu {
   width: 2.5rem;
   height: 2.5rem;
@@ -209,7 +190,6 @@ section {
     transition: .5s;
   }
 }
-
 .hamburger-menu div:before,
 .hamburger-menu div:after {
   content: '';
@@ -220,7 +200,6 @@ section {
   border-radius: 3px;
   transition: .5s;
 }
-
 .hamburger-menu div:before { transform: translateY(-7px); }
 .hamburger-menu div:after{ transform: translateY(7px); }
 
@@ -236,7 +215,6 @@ section {
   opacity: 0;
   display: none;
 }
-
 #check:checked ~ .hamburger-menu-container .hamburger-menu div { background-color: transparent; }
 #check:checked ~ .hamburger-menu-container .hamburger-menu div:before { transform: translateY(0) rotate(-45deg); }
 #check:checked ~ .hamburger-menu-container .hamburger-menu div:after { transform: translateY(0) rotate(45deg); }
@@ -360,15 +338,13 @@ section {
     color: $color1;
   }
 }
-
 @media (max-width: 545px) { .logo { display: none;} }
-@media (min-width: 921px) and (max-width: 1020px) { .logo { display: none;} }
+@media (min-width: 910px) and (max-width: 1025px) { .logo { display: none;} }
 
 .header-slide {
   background-color: $clb;
   font-size: large;
 }
-
 .header-slide-container {
   margin: 0;
   height: 400px;
@@ -393,6 +369,26 @@ section {
 
 @media (max-width: 1163px) { .notes { padding: 5px 10px; } }
 @media (max-width: 895px) { .picture img { padding-right: 20px; } }
+@media (max-width: 850px) {
+  .header-slide-container {
+    display: grid;
+    grid-template-areas: "notes"
+                          "picture";
+  }
+  .notes {
+    grid-area: notes;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    font-size: normal;
+  }
+  .picture { grid-area: picture; }
+  .picture img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 ///////////////////////////////
 // Main (Content)
@@ -424,21 +420,14 @@ main {
 
   .content { padding: 5px 10px; }
   .content p { text-align: justify; }
-
 }
 
 // Mark Tag
 mark { background-color: $clb; color: $color1;}
 .header-slide-container mark { background-color: $cwh; color: $color1;}
 
-@media (min-width: 900px) {
-  main,
-  .header-slide-container { margin: 0 10%; }
-}
-@media (min-width: 901px) and (max-width: 1055px) {
-  main,
-  .header-slide-container { margin: 0 5%; }
-}
+@media (min-width: 900px) { main, .header-slide-container { margin: 0 10%; } }
+@media (min-width: 901px) and (max-width: 1055px) { main, .header-slide-container { margin: 0 5%; } }
 
 ///////////////////////////////
 
@@ -450,10 +439,6 @@ footer {
   background-color: $clb;
   color: $color2;
 
-  a {
-    color: $color2;
-    text-decoration-line: none;
-  }
-
+  a { color: $color2; text-decoration-line: none; }
   a:hover { text-decoration-line: underline; }
 }
