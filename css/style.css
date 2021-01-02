@@ -587,6 +587,10 @@ main .content {
 main .content p {
   text-align: justify;
 }
+main .list {
+  list-style: circle !important;
+  padding-left: 25px;
+}
 
 mark {
   background-color: #add8e6;
