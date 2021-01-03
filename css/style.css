@@ -442,6 +442,13 @@ section {
   background-color: #add8e6;
   font-size: large;
 }
+.header-slide a {
+  color: #4c96d7;
+  text-decoration: underline;
+}
+.header-slide a:hover {
+  color: #000;
+}
 
 .header-slide-container {
   margin: 0;
@@ -586,6 +593,7 @@ main .content {
 }
 main .content p {
   text-align: justify;
+  padding-bottom: 10px;
 }
 main .list {
   list-style: circle !important;

@@ -341,6 +341,9 @@ section {
 .header-slide {
   background-color: $clb;
   font-size: large;
+
+  a { color: $color1; text-decoration: underline; }
+  a:hover { color: $cbl; }
 }
 .header-slide-container {
   margin: 0;
@@ -418,7 +421,7 @@ main {
   a:hover { color: $cbl; text-decoration: underline solid $color1 2px; }
 
   .content { padding: 5px 10px; }
-  .content p { text-align: justify; }
+  .content p { text-align: justify; padding-bottom: 10px; }
 
   .list { list-style: circle !important; padding-left: 25px; }
   .list li > ul { list-style: square !important; padding-left: 50px; }
