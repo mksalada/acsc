@@ -6,6 +6,7 @@
 ** properly on my HTML document
 */
 
+/* ? Services */
 .poster {
   display: grid !important;
   grid-template-areas:
@@ -34,3 +35,11 @@
     grid-row-gap: 30px;
   }
 }
+
+/* ? Gallery */
+.gallery {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px 20px;
+}
+.gallery .image img { width: 300px; }
