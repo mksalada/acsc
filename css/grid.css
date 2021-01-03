@@ -1,0 +1,36 @@
+/*
+** Grid CSS for services.html
+** IDK why but Grid is now working
+** /supported on SASS/SCSS so I created
+** a separated CSS file for it to work
+** properly on my HTML document
+*/
+
+.poster {
+  display: grid !important;
+  grid-template-areas:
+    "donate membership event";
+}
+.poster a > img { width: 300px; }
+
+#donate { grid-area: donate; }
+#membership { grid-area: membership; }
+#event { grid-area: event; }
+
+@media (max-width: 1220px) {
+  .poster {
+    grid-template-areas:
+      "donate membership"
+      "event event";
+    grid-row-gap: 30px;
+  }
+}
+@media (max-width: 680px) {
+  .poster {
+    grid-template-areas:
+      "donate"
+      "membership"
+      "event";
+    grid-row-gap: 30px;
+  }
+}
