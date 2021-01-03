@@ -591,6 +591,10 @@ main .list {
   list-style: circle !important;
   padding-left: 25px;
 }
+main .list li > ul {
+  list-style: square !important;
+  padding-left: 50px;
+}
 
 mark {
   background-color: #add8e6;

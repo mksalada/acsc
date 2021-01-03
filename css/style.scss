@@ -421,6 +421,7 @@ main {
   .content p { text-align: justify; }
 
   .list { list-style: circle !important; padding-left: 25px; }
+  .list li > ul { list-style: square !important; padding-left: 50px; }
 }
 
 // Mark Tag
