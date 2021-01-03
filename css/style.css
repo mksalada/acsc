@@ -603,6 +603,64 @@ main .list li > ul {
   list-style: square !important;
   padding-left: 50px;
 }
+main .division {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "donate membership event" "donate membership event" "donate membership event";
+}
+main .division img {
+  width: 300px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .poster {
+        grid-template-areas: "donate donate donate" "membership membership membership" "event event event";
+  }
+  .poster img {
+    width: 200px;
+  }
+}
+#donate {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: donate;
+}
+
+#membership {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: membership;
+}
+
+#event {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: event;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .poster > #donate {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .poster > #membership {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .poster > #event {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
 
 mark {
   background-color: #add8e6;

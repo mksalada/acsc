@@ -425,7 +425,33 @@ main {
 
   .list { list-style: circle !important; padding-left: 25px; }
   .list li > ul { list-style: square !important; padding-left: 50px; }
+
+  .division {
+    display: grid;
+    grid-template-areas:
+      "donate membership event"
+      "donate membership event"
+      "donate membership event";
+
+    img { width: 300px; }
+  }
 }
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .poster {
+    grid-template-areas:
+      "donate donate donate"
+      "membership membership membership"
+      "event event event";
+    //grid-row-gap: 15px;
+
+    img { width: 200px;}
+  }
+}
+
+#donate { grid-area: donate; }
+#membership { grid-area: membership; }
+#event { grid-area: event; }
 
 // Mark Tag
 mark { background-color: $clb; color: $color1;}
